@@ -1,0 +1,13 @@
+﻿<Properties StartupConfiguration="{BD174A6C-67A1-4429-A03B-450F24F6B252}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="OperatorOverloading/Program.cs">
+    <Files>
+      <File FileName="OperatorOverloading/Program.cs" Line="78" Column="2" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>
