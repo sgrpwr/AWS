@@ -1,0 +1,5 @@
+/Users/sagar/Projects/dynamic/dynamic/bin/Debug/dynamic.exe
+/Users/sagar/Projects/dynamic/dynamic/bin/Debug/dynamic.pdb
+/Users/sagar/Projects/dynamic/dynamic/obj/x86/Debug/dynamic.csproj.CoreCompileInputs.cache
+/Users/sagar/Projects/dynamic/dynamic/obj/x86/Debug/dynamic.exe
+/Users/sagar/Projects/dynamic/dynamic/obj/x86/Debug/dynamic.pdb

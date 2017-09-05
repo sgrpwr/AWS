@@ -1,0 +1,5 @@
+/Users/sagar/Projects/abstact/abstact/bin/Debug/abstact.exe
+/Users/sagar/Projects/abstact/abstact/bin/Debug/abstact.pdb
+/Users/sagar/Projects/abstact/abstact/obj/x86/Debug/abstact.csproj.CoreCompileInputs.cache
+/Users/sagar/Projects/abstact/abstact/obj/x86/Debug/abstact.exe
+/Users/sagar/Projects/abstact/abstact/obj/x86/Debug/abstact.pdb

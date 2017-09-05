@@ -1,34 +1,33 @@
 ﻿using System;
 namespace PolymorphismApplication
 {
-	class Printdata
+	abstract class Shape
 	{
-		void print(int i)
+		public abstract int area();
+	}
+	class Rectangle : Shape
+	{
+		private int length;
+		private int width;
+		public Rectangle(int a = 0, int b = 0)
 		{
-			Console.WriteLine("Printing int: {0}", i);
+			length = a;
+			width = b;
 		}
+		public override int area()
+		{
+			Console.WriteLine("Rectangle class area :");
+			return (width * length);
+		}
+	}
 
-		void print(double f)
-		{
-			Console.WriteLine("Printing float: {0}", f);
-		}
-
-		void print(string s)
-		{
-			Console.WriteLine("Printing string: {0}", s);
-		}
+	class RectangleTester
+	{
 		static void Main(string[] args)
 		{
-			Printdata p = new Printdata();
-
-			// Call print to print integer
-			p.print(9);
-
-			// Call print to print float
-			p.print(233.421);
-
-			// Call print to print string
-			p.print("String message");
+			Rectangle r = new Rectangle(29, 3);
+			double a = r.area();
+			Console.WriteLine("Area: {0}", a);
 			Console.ReadKey();
 		}
 	}
