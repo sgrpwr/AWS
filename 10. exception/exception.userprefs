@@ -1,0 +1,13 @@
+﻿<Properties StartupConfiguration="{3BD5EC44-CAD1-4AB7-BB59-92D29C27222F}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="exception/Program.cs">
+    <Files>
+      <File FileName="exception/Program.cs" Line="33" Column="2" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>

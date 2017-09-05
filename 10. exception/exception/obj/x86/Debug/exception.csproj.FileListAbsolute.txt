@@ -1,0 +1,5 @@
+/Users/sagar/Projects/exception/exception/bin/Debug/exception.exe
+/Users/sagar/Projects/exception/exception/bin/Debug/exception.pdb
+/Users/sagar/Projects/exception/exception/obj/x86/Debug/exception.csproj.CoreCompileInputs.cache
+/Users/sagar/Projects/exception/exception/obj/x86/Debug/exception.exe
+/Users/sagar/Projects/exception/exception/obj/x86/Debug/exception.pdb
