@@ -1,14 +1,23 @@
 #include <stdio.h>
-
 int main()
 {
-    int num;
-    printf("Enter any number");
-    scanf("%d",&num);
-    if(num%2==0){
-        printf("Your number %d is even",num);
+    int n, i, sumo = 0,sume=0;
+    
+    printf("Enter a positive integer: ");
+    scanf("%d",&n);
+    
+    for(i=1; i <= n; ++i)
+    {
+        if(i%2==0){
+            sume += i;   // sum = sum+i;
+        }
+        else{
+            sumo += i;
+        }
+        
     }
-    else
-        printf("Number was odd!");
+    
+    printf("Sum odd = %d and Sum even = %d",sumo,sume);
+    
     return 0;
 }
