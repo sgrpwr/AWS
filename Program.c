@@ -2,12 +2,13 @@
 
 int main()
 {
-    int n[3],i;
-    printf("Enter any 3 numbes");
-    for( i=0;i<3;i++)
-        scanf("%d",&n[i]);
-    for( i=0;i<3;i++)
-        printf("%d\n",n[i]);
+    int num;
+    printf("Enter any number");
+    scanf("%d",&num);
+    if(num%2==0){
+        printf("Your number %d is even",num);
+    }
+    else
+        printf("Number was odd!");
     return 0;
 }
-
