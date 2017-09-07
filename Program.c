@@ -2,15 +2,19 @@
 
 int main()
 {
-    float gs,bs;
-    printf("Enter your Basic Salary:\n");
-    scanf("%f",&bs);
-    if (bs<1500){
-        gs = bs+(bs/10)+(bs*9)/10; //BS+HRA+DA
-        printf("Your gross salary is %f:",gs);}
-    else{
-        gs = bs+500+(bs*9.8)/10;   //BS+HRA+DA
-        printf("Your gross salary is %f:",gs);}
+    float total,p;
+    printf("Enter your total marks:\n");
+    scanf("%f",&total);
+    p=total/5;
+    printf("Your percentage is: %f %\n",p);
+    if (p>=60)
+        printf("Your division is Ist:");
+    else if(p>=50||p>=59)
+        printf("Your division is IIst:");
+    else if(p>=41||p>=49)
+        printf("Your division is IIIst:");
+    else
+        printf("You failed this class:");
     return 0;
 }
 
