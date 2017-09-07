@@ -2,19 +2,13 @@
 
 int main()
 {
-    float total,p;
-    printf("Enter your total marks:\n");
-    scanf("%f",&total);
-    p=total/5;
-    printf("Your percentage is: %f %\n",p);
-    if (p>=60)
-        printf("Your division is Ist:");
-    else if(p>=50||p>=59)
-        printf("Your division is IIst:");
-    else if(p>=41||p>=49)
-        printf("Your division is IIIst:");
-    else
-        printf("You failed this class:");
+    int n[3],i;
+    printf("Enter any 3 numbes");
+    for( i=0;i<3;i++)
+        scanf("%d",&n[i]);
+    for( i=0;i<3;i++)
+        printf("%d\n",n[i]);
+    
     return 0;
 }
 
