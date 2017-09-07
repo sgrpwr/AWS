@@ -2,12 +2,14 @@
 
 int main()
 {
-    printf("hello, world\n");
-    return 1;
+    int x=32;
+    if (x==2)
+        printf("Hello, World!\n");
+    else if(x==3)
+        printf("Not Hello, World!\n");
+    else
+        printf("Not not Hello, World!\n");
+    
+    return 0;
 }
 
-// Compile, then run `./a.out 1>stdout.txt 2>stderr.txt`
-// Then run `echo $?`
-// stdout.txt should contain "hello, world"
-// stderr.txt should be empty
-// Your `echo $?` command should return 1
