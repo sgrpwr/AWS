@@ -1,15 +1,18 @@
 #include <stdio.h>
 int main()
 {
-    int i,num,a[5];
-    printf("Enter a number:");
-    scanf("%d",&num);
-    for(i=2;i>=0;i--){
-        a[i]=num%10;
-        num/=10;
+    int i,size,a[50];
+    printf("Enter size of array:");
+    scanf("%d",&size);
+    printf("Enter Numbers:\n");
+    for(i=0;i<=size-1;++i){
+        scanf("%d",&a[i]);
     }
-    for(i=2;i>=0;i--){
-        printf("Splitted %dst element is %d\n",i,a[i]);
+    for(i=0;i<=size-1;++i){
+        printf("Number %d: %d\n",i,a[i]);
+        if(a[0]<a[i])
+            a[0]=a[i];
     }
+    printf("And the largest number is : %d\n",a[0]);
     return 0;
 }
