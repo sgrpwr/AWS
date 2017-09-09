@@ -1,14 +1,13 @@
 #include<stdio.h>
-int main(){
-    int i,j,k,n=7;
-    for(i=n;i>=1;i--){
-        for(j=1;j<i;j++){
-            printf(" ");
-        }
-        for(k=n;k>=i;k--){
-            printf("*");
-        }
-        printf("\n");
+void main(){
+    int num,r,base=1,d=0;
+    printf("Enter a binary number");
+    scanf("%d",&num);
+    while(num>0){
+        r=num%10;
+        num/=10;a
+        d=d+r*base;
+        base*=2;
     }
-    return 0;
+    printf("Decimal conversion is %d",d);
 }
