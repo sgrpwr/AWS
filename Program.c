@@ -1,15 +1,18 @@
-#include<stdio.h>
-int main(){
+#include <stdio.h>
+int main()
+{
     int i,j;
     for(i=1;i<=5;i++){
         for(j=5;j>=1;j--){
-            printf("*");
-            if(i==j){
-                printf("\n");
-                break;
+            printf(" ");
+            if(i>=j){
+                printf("*");
+                if(j==1){
+                    printf("\n");
+                    break;
+                }
             }
         }
-        
     }
     return 0;
 }
