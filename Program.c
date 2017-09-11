@@ -6,23 +6,19 @@
 #include <limits.h>
 #include <stdbool.h>
 
-long int aVeryBigSum(int n, int ar_size, long int* ar) {
-    // Complete this function
-    long long int sum=0;
-    for(int ar_i = 0; ar_i < n; ar_i++){
-        sum+=ar[ar_i];
-    }
-    return sum;
-}
-
-int main() {
+int main(){
     int n;
-    scanf("%i", &n);
-    long int *ar = malloc(sizeof(long int) * n);
-    for(int ar_i = 0; ar_i < n; ar_i++){
-        scanf("%li",&ar[ar_i]);
+    float a=0,b=0,c=0;
+    scanf("%d",&n);
+    int arr[n];
+    for(int arr_i = 0; arr_i < n; arr_i++){
+        scanf("%d",&arr[arr_i]);
     }
-    long int result = aVeryBigSum(n, n, ar);
-    printf("%ld\n", result);
+    for(int i=0;i<n;i++){
+        if(arr[i]<0) a++;
+        else if(arr[i]>0) b++;
+        else c++;
+    }
+    printf("%f\n%f\n%f",b/n,a/n,c/n);
     return 0;
 }
