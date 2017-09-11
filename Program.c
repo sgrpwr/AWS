@@ -1,13 +1,20 @@
-#include<stdio.h>
-void main(){
-    int num,r,base=1,d=0;
-    printf("Enter a binary number");
-    scanf("%d",&num);
-    while(num>0){
-        r=num%10;
-        num/=10;a
-        d=d+r*base;
-        base*=2;
-    }
-    printf("Decimal conversion is %d",d);
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <assert.h>
+#include <limits.h>
+#include <stdbool.h>
+
+int main()
+{
+    int sum=0,i,n;
+    scanf("%d",&n);
+    int arr[n];
+    for(i=0;i<n;i++)
+        scanf("%d",&arr[i]);
+    for(i=0;i<n;i++){
+        sum=sum+arr[i];}
+    printf("%d",sum);
+    return 0;
 }
