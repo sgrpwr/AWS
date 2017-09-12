@@ -6,21 +6,18 @@
 #include <limits.h>
 #include <stdbool.h>
 
-int main(){
-    int n,sum1=0,sum2=0;
-    scanf("%d",&n);
-    int a[n][n];
-    for(int i = 0; i < n; i++){
-        for(int j = 0; j < n; j++){
-            scanf("%d",&a[i][j]);
-        }
-    }
-    for(int i = 0; i < n; i++){
-        for(int j = 0; j < n; j++){
-            if(i==j) sum1=sum1+a[i][j];
-            if(i+j==n-1) sum2=sum2+a[i][j];
-        }
-    }
-    printf("%d",abs(sum1-sum2));
+int main() {
+    int a0,a1,a2,A=0,B=0;
+    scanf("%d %d %d", &a0, &a1, &a2);
+    int b0,b1,b2;
+    scanf("%d %d %d", &b0, &b1, &b2);
+    
+    if(a0>b0) A++;
+    if(a1>b1) A++;
+    if(a2>b2) A++;
+    if(b0>a0) B++;
+    if(b1>a1) B++;
+    if(b2>a2) B++;
+    printf("%d %d",A,B);
     return 0;
 }
