@@ -6,18 +6,21 @@
 #include <limits.h>
 #include <stdbool.h>
 
-int main() {
-    int a0,a1,a2,A=0,B=0;
-    scanf("%d %d %d", &a0, &a1, &a2);
-    int b0,b1,b2;
-    scanf("%d %d %d", &b0, &b1, &b2);
-    
-    if(a0>b0) A++;
-    if(a1>b1) A++;
-    if(a2>b2) A++;
-    if(b0>a0) B++;
-    if(b1>a1) B++;
-    if(b2>a2) B++;
-    printf("%d %d",A,B);
+int main(){
+    int n,largest,i,j=0;
+    scanf("%d\n",&n);
+    int arr[n];
+    for(i=0;i<n;i++) scanf("%d",&arr[i]);
+    largest=arr[0];
+    for(i=1;i<n;i++){
+        if(largest<arr[i]){
+            largest=arr[i];
+        }
+    }
+    for(i=0;i<n;i++){
+        if(arr[i]==largest)
+            j++;
+    }
+    printf("%d\n",j);
     return 0;
 }
