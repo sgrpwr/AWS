@@ -1,26 +1,38 @@
-#include <math.h>
 #include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-#include <assert.h>
-#include <limits.h>
-#include <stdbool.h>
 
-int main(){
-    int n,largest,i,j=0;
-    scanf("%d\n",&n);
-    int arr[n];
-    for(i=0;i<n;i++) scanf("%d",&arr[i]);
-    largest=arr[0];
-    for(i=1;i<n;i++){
-        if(largest<arr[i]){
-            largest=arr[i];
-        }
+int main()
+{
+    int n=5,i,j,max=0,min=0;
+    int sum[n];
+    int arr[n][n],inp[n];
+    for(i=0;i<n;i++){
+        scanf("%d",&inp[i]);
     }
     for(i=0;i<n;i++){
-        if(arr[i]==largest)
-            j++;
+        for(j=0;j<n;j++){
+            arr[i][j]=inp[j];
+        }
     }
-    printf("%d\n",j);
+    sum[0]=0;
+    for(i=0;i<n;i++){
+        for(j=0;j<n;j++){
+            if(i==j) continue;
+            sum[i]=sum[i]+arr[i][j];
+        }
+    }
+    
+    max=sum[0];
+    min=sum[0];
+    for(i=1;i<n;i++){
+        if(max<sum[i]) max=sum[i];
+        if(min>sum[i]) min=sum[i];
+    }
+    for(i=0;i<n;i++){
+        for(j=0;j<n;j++){
+            printf("%d\n",arr[i][j]);
+        }
+    }
+    //for(i=0;i<n;i++) printf("%d\n",sum[i]);
+    printf("%d  %d",min,max);
     return 0;
 }
