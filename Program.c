@@ -1,18 +1,18 @@
-#include <stdio.h>
+#include<stdio.h>
 
-struct student{
-    char name[20];
-    int age;
-    int roll_no;
-}s1,s2;
+int sum(int);
 
-int main()
-{
-    struct student person;
-    s1.age=22;
-    s1.roll_no=13;
-    s2=s1;
-    printf("%d\n%d\n\n",s1.age,s1.roll_no);
-    printf("%d\n%d",s2.age,s2.roll_no);
+int sum(int a){
+    int s;
+    if(a==1) return a;
+    s=a+sum(a-1);
+    return s;
+}
+
+int main(){
+    long long int k;
+    k=sum(1000000);
+    printf("%lld",k);
+    
     return 0;
 }
