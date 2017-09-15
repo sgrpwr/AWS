@@ -1,18 +1,24 @@
 #include<stdio.h>
 
-int sum(int);
-
-int sum(int a){
-    int s;
-    if(a==1) return a;
-    s=a+sum(a-1);
-    return s;
-}
-
 int main(){
-    long long int k;
-    k=sum(1000000);
-    printf("%lld",k);
+    int T,rem,i;
+    scanf("%d",&T);
+    int grade[T];
+    for(i=0;i<T;i++){
+        scanf("%d",&grade[i]);
+    }
     
+    for(i=0;i<T;i++){
+        if(grade[i]<38) grade[i]=grade[i];
+        if(grade[i]>=38){
+            if(grade[i]%5>=3){
+                rem = grade[i]%5;
+                grade[i]=grade[i]+(5-rem);
+            }
+        }
+    }
+    for(i=0;i<T;i++){
+        printf("%d\n",grade[i]);
+    }
     return 0;
 }
