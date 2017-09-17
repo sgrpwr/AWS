@@ -1,33 +1,17 @@
-#include <math.h>
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-#include <assert.h>
-#include <limits.h>
-#include <stdbool.h>
-
-char* kangaroo(int x1, int v1, int x2, int v2) {
-    int sum1,sum2,i;
-    sum1=x1;
-    sum2=x2;
-    for(i=0;i<10000;i++){
-        sum1=sum1+v1;
-        sum2=sum2+v2;
-        if(sum1==sum2) break;
+#include<stdio.h>
+int main(){
+    int n,i,arr[n],count=0;
+    scanf("%d",&n);
+    for(i=0;i<n;i++){
+        scanf("%d",&arr[i]);
     }
+    for(i=1;i<n;i++){
+        if(arr[i]>arr[i+1]){
+            arr[i+1]=arr[i];
+            count++;
+        }
+    }
+    printf("%d",count);
     
-    if(sum1==sum2) return ("YES");
-    else return("NO");
-}
-
-int main() {
-    int x1;
-    int v1;
-    int x2;
-    int v2;
-    scanf("%i %i %i %i", &x1, &v1, &x2, &v2);
-    int result_size;
-    char* result = kangaroo(x1, v1, x2, v2);
-    printf("%s\n", result);
     return 0;
 }
