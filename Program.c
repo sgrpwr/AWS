@@ -1,6 +1,6 @@
 #include<stdio.h>
 int main(){
-    int n,i,arr[n],count=0;
+    int n,i,arr[n],count1=0,count2=0;
     scanf("%d",&n);
     for(i=0;i<n;i++){
         scanf("%d",&arr[i]);
@@ -8,10 +8,19 @@ int main(){
     for(i=1;i<n;i++){
         if(arr[i]>arr[i+1]){
             arr[i+1]=arr[i];
-            count++;
+            count1++;
         }
     }
-    printf("%d",count);
+    
+    for(i=1;i<n;i++){
+        if(arr[i]<arr[i+1]){
+            arr[i+1]=arr[i];
+            count2++;
+        }
+    }
+    
+    
+    printf("%d %d",count1,count2);
     
     return 0;
 }
