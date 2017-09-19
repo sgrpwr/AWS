@@ -1,5 +1,6 @@
 #include<stdio.h>
 int main(){
+    //Only working for 2 or 3 test cases.
     int n,i,arr[n],count1=0,count2=0;
     scanf("%d",&n);
     for(i=0;i<n;i++){
