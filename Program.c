@@ -1,27 +1,18 @@
 #include<stdio.h>
 int main(){
-    //Only working for 2 or 3 test cases.
-    int n,i,arr[n],count1=0,count2=0;
-    scanf("%d",&n);
-    for(i=0;i<n;i++){
-        scanf("%d",&arr[i]);
-    }
-    for(i=1;i<n;i++){
-        if(arr[i]>arr[i+1]){
-            arr[i+1]=arr[i];
-            count1++;
+    long long int n,k,i,j,count=0;
+    scanf("%lld %d",&n,&k);
+    int arr[n];
+    int sum[100];
+    for(i=0;i<n;i++) scanf("%d",arr[i]);
+    for(i=0;i<n;i++)
+        for(j=0;j<n;j++){
+            sum[i]=0;
+            if(i<j){
+                sum[i]=arr[i]+arr[j];
+                if(sum[i]%k==0) count++;
+            }
         }
-    }
-    
-    for(i=1;i<n;i++){
-        if(arr[i]<arr[i+1]){
-            arr[i+1]=arr[i];
-            count2++;
-        }
-    }
-    
-    
-    printf("%d %d",count1,count2);
-    
+    printf("%d",count);
     return 0;
 }
