@@ -6,32 +6,31 @@
 #include <limits.h>
 #include <stdbool.h>
 
-int main(){
-    int s,count1=0,count2=0,i;
-    int t;
-    scanf("%d %d",&s,&t);
-    int a;
-    int b;
-    scanf("%d %d",&a,&b);
-    int m;
+int getTotalX(int a_size, int* a, int b_size, int* b) {
+    int min=b[0],i,j,count=0;
+    for(i=0;i<b_size;i++){
+        if(b[i]<min) min=b[i];
+    }
+    
+    for(j=min;j<=min;j--) if(min%j==0) for(i=1;i<b_size;i++) if(b[i]%j==0) count++;
+    //printf("\n%d",min);
+    return count;
+    
+}
+
+int main() {
     int n;
-    scanf("%d %d",&m,&n);
-    int *apple = malloc(sizeof(int) * m);
-    for(int apple_i = 0; apple_i < m; apple_i++){
-        scanf("%d",&apple[apple_i]);
+    int m;
+    scanf("%i %i", &n, &m);
+    int *a = malloc(sizeof(int) * n);
+    for (int a_i = 0; a_i < n; a_i++) {
+        scanf("%i",&a[a_i]);
     }
-    int *orange = malloc(sizeof(int) * n);
-    for(int orange_i = 0; orange_i < n; orange_i++){
-        scanf("%d",&orange[orange_i]);
+    int *b = malloc(sizeof(int) * m);
+    for (int b_i = 0; b_i < m; b_i++) {
+        scanf("%i",&b[b_i]);
     }
-    for(i = 0; i < m; i++){
-        apple[i]=a+apple[i];
-        if(apple[i]>=s&&apple[i]<=t) count1++;
-    }
-    for(i = 0; i < n; i++){
-        orange[i]=b+orange[i];
-        if(orange[i]>=s&&orange[i]<=t) count2++;
-    }
-    printf("%d\n%d",count1,count2);
+    int total = getTotalX(n, a, m, b);
+    printf("%d\n", total);
     return 0;
 }
