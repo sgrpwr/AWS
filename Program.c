@@ -1,36 +1,24 @@
-#include <math.h>
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-#include <assert.h>
-#include <limits.h>
-#include <stdbool.h>
-
-int getTotalX(int a_size, int* a, int b_size, int* b) {
-    int min=b[0],i,j,count=0;
-    for(i=0;i<b_size;i++){
-        if(b[i]<min) min=b[i];
+#include<stdio.h>
+int main(){
+    int n,i,count1=0,count2=0;
+    scanf("%d",&n);
+    int arr[n];
+    for(i=0;i<n;i++){
+        scanf("%d",&arr[i]);
     }
-    
-    for(j=min;j<=min;j--) if(min%j==0) for(i=1;i<b_size;i++) if(b[i]%j==0) count++;
-    //printf("\n%d",min);
-    return count;
-    
-}
-
-int main() {
-    int n;
-    int m;
-    scanf("%i %i", &n, &m);
-    int *a = malloc(sizeof(int) * n);
-    for (int a_i = 0; a_i < n; a_i++) {
-        scanf("%i",&a[a_i]);
+    int max=arr[0],min=arr[0];
+    for(i=0;i<n;i++){
+        if(max<arr[i]){
+            max=arr[i];
+            count1++;
+        }
     }
-    int *b = malloc(sizeof(int) * m);
-    for (int b_i = 0; b_i < m; b_i++) {
-        scanf("%i",&b[b_i]);
+    for(i=1;i<n;i++){
+        if(min>arr[i]){
+            min=arr[i];
+            count2++;
+        }
     }
-    int total = getTotalX(n, a, m, b);
-    printf("%d\n", total);
+    printf("%d %d",count1,count2);
     return 0;
 }
