@@ -7,12 +7,14 @@
 #include <stdbool.h>
 
 int solve(int n, int s_size, int* s, int d, int m){
-    int i,j,count=0,sum=0;
-    for(i=0;i<5;i++){
-        for(j=0;j<2;j++){
-            if(s[i]+s[j+1]==d)
-                count++;
-        }
+    int i,j,count=0,sum;
+    for(i=0;i<n;i++){
+        sum=0;
+        for(j=i;j<i+m;j++){
+            sum+=s[j];}
+        if(sum==d)
+            count++;
+        
     }
     return count;
 }
@@ -31,4 +33,3 @@ int main() {
     printf("%d\n", result);
     return 0;
 }
-//has been reviewed.
