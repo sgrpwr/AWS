@@ -1,43 +1,36 @@
-#include <math.h>
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-#include <assert.h>
-#include <limits.h>
-#include <stdbool.h>
+#include<stdio.h>
+//#define size 100
+int top=-1,A[100];
 
-int getTotalX(int a_size, int* a, int b_size, int* b) {
-    int min=b[0],i,j,count=0;
-    for(i=0;i<b_size;i++){
-        if(b[i]<min) min=b[i];
+void Push(int x){
+    if(top == 100){
+        printf("\nOverflow");return;
     }
-    
-    for(j=min;j<=min;j--){
-        if(min%j==0) {
-            for(i=1;i<b_size;i++){
-                if(b[i]%j==0) count++;
-            }
-        }
-    }
-    //printf("\n%d",min);
-    return count;
-    
+    A[++top]=x;
 }
 
-int main() {
-    int n=2;
-    int m=3;
-    int a[]={2,4},b[]={16,32,96};
-    //scanf("%i %i", &n, &m);
-    /*int *a = malloc(sizeof(int) * n);
-     for (int a_i = 0; a_i < n; a_i++) {
-     scanf("%i",&a[a_i]);
-     }
-     int *b = malloc(sizeof(int) * m);
-     for (int b_i = 0; b_i < m; b_i++) {
-     scanf("%i",&b[b_i]);
-     }*/
-    int total = getTotalX(n, a, m, b);
-    printf("%d\n", total);
-    return 0;
+void Pop(){
+    if(top == -1){
+        printf("\nAlready Empty!");return;
+    }
+    top--;
+}
+
+void Top(){
+    return A[top];
+}
+
+void Print(){
+    printf("Stack :");
+    for(int i=0; i<=top; i++)
+        printf("%d\n",A[i]);
+}
+
+int main(){
+    Push(2);Print();
+    Push(5);Print();
+    Push(10);Print();
+    Pop();Print();
+    Push(12);Print();
+    
 }
