@@ -1,36 +1,23 @@
 #include<stdio.h>
-//#define size 100
-int top=-1,A[100];
 
-void Push(int x){
-    if(top == 100){
-        printf("\nOverflow");return;
-    }
-    A[++top]=x;
+struct node{
+    int info;
+    struct node *link;
+};
+
+struct node *START=NULL;
+
+struct node* createNode(){
+    struct node *n;
+    n= (struct node *)malloc(sizeof(struct node));
+    return(n);
 }
 
-void Pop(){
-    if(top == -1){
-        printf("\nAlready Empty!");return;
-    }
-    top--;
-}
-
-void Top(){
-    return A[top];
-}
-
-void Print(){
-    printf("Stack :");
-    for(int i=0; i<=top; i++)
-        printf("%d\n",A[i]);
-}
-
-int main(){
-    Push(2);Print();
-    Push(5);Print();
-    Push(10);Print();
-    Pop();Print();
-    Push(12);Print();
+void insertNode(){
     
 }
+int main(){
+    return 0;
+}
+
+
